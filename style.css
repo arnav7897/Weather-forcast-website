@@ -1,0 +1,298 @@
+:root{
+
+--primary: #B5A1E5; 
+--on-primary: #100E17; 
+--background: #131214;
+--on-background: #EAE6F2;
+--surface: #1D1C1F;
+--on-surface: #DDDAE5;
+--on-surface-variant: #7B7980; 
+--on-surface-variant-2: #B9B6BF;
+--outline: #3E3D40;
+--bg-aqi-1: #89E589;
+--on-bg-aqi-1: #1F331F;
+--bg-aqi-2: #E5DD89;
+--on-bg-aqi-2: #33311F;
+--bg-aqi-3: #E5C089;
+--on-bg-aqi-3: #332B1F;
+--bg-aqi-4: #E58989;
+--on-bg-aqi-4: #331F1F;
+--bg-aqi-5: #E589B7;
+--on-bg-aqi-5: #331F29;
+--white: hsl(0, 0%, 100%);
+--white-alpha-4: hsla(0, 0%, 100%, 0.04);
+--white-alpha-8: hsla(0, 0%, 100%, 0.08);
+--black-alpha-10: hsla(0, 0%, 0%, 0.1);
+--gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
+--gradient-2: linear-gradient(180deg, hsla(260, 5%, 12%, 0) 0%, hsla(260, 5%, 12%, 0.8) 65%, hsl(260, 5%, 12%) 100%);
+--ff-nunito-sans: 'Nunito Sans', sans-serif;
+
+--heading: 5.6rem;
+--title-1: 2rem;
+--title-2: 1.8rem;
+--title-3: 1.6rem;
+--body-1: 2.2rem;
+--body-2: 2rem;
+--body-3: 1.6rem;
+--label-1: 1.4rem;
+--label-2: 1.2rem;
+
+--weight-regular: 400;
+--weight-semiBold: 600;
+}
+
+body{
+    background-color:var(--background);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--ff-nunito-sans);
+}
+
+
+
+.inputBox {
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  .inputBox input {
+    padding: 10px 20px;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid#ee8456;
+    font-size: 1em;
+    width: 400px;
+  }
+  
+  .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px 5px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+    color: #ee8456;
+    letter-spacing: 0.1em;
+  }
+  
+  .inputBox input:focus ~ span,
+  .inputBox input:valid ~ span {
+    font-size: 0.7em;
+    transform: translateX(14px) translateY(-7.5px);
+    padding: 0 5px;
+    border-radius: 2px;
+    background: #212121;
+    letter-spacing: 0em;
+    border: 1px solid #ee8456;
+  }
+  
+  
+button {
+    width: 10em;
+    position: relative;
+    height: 2.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: var(--background);
+    transition: 0.5s;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
+
+  #active{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+
+    font-size: var(--title-2);
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+      color:whitesmoke;
+  }
+
+.navbar-brand{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: var(--title-1);
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+      color:whitesmoke;
+}
+#nav{
+    background-color: #212121;
+}
+.line {
+    border-bottom: 1px solid #f8f8f8;
+  }
+.nav-item{
+    padding-left: 30px;
+}
+.navbar-brand:hover{
+    color:yellow;
+    text-decoration: underline;
+    text-shadow:0 0 30px rgb(221, 221, 9),
+                0 0 30px rgb(199, 199, 14);
+    transform: scale(1.1);
+}
+.active:hover{
+    text-decoration: underline;
+    text-shadow:0 0 30px rgb(221, 221, 9),
+                0 0 30px rgb(199, 199, 14);
+    transform: scale(1.1);
+}
+/* content */
+
+.content{
+    display: flex;
+    background-color: var(--background);
+    height: 100vh;
+    align-items: flex-start;
+    gap: 20px;
+    justify-content: space-between;
+    color: var(--on-surface);
+    margin-top: 100px;
+}
+
+.sider{
+    width: 20%;
+    margin-left: 30px;
+    min-height: 40%;
+    background-color: var(--surface);
+    background: var(--gradient-2);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap:50px;
+    align-items: center;
+}
+.s_content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.s_heading{
+    font-size: var(--label-1);
+    margin-top: 20px;
+}
+.s_city{
+    align-self: center;
+    font-size: var(--body-1);
+}
+.s_region{
+    font-size: var(--label-2);
+}
+.s_time{
+    font-size: var(--label-2);
+}
+
+.forcast{
+    width: 70%;
+    background-color: var(--surface);
+    height: 70%;
+    padding: 30px;
+    margin-right: 30px;
+    border-radius: 40px;
+    display: grid;
+    grid-template-areas: "temp temp temp temp"
+                "pressure wind uv aqi";
+    row-gap: 40px;
+    column-gap: 20px;
+}
+.temp{
+    grid-area: temp;
+    background: var(--gradient-1);
+    height: 100%;
+    
+}
+.pressure{
+    grid-area: pressure;
+    background: var(--gradient-1);
+    height: 100%;
+}
+.wind{
+    grid-area: wind;
+    background: var(--gradient-1);
+    height: 100%;
+}
+.uv{
+    grid-area: uv;
+    background: var(--gradient-1);
+    height: 100%;
+}
+.aqi{
+    grid-area: aqi;
+    background: var(--gradient-1);
+    height: 100%;
+}
+.temp{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+img{
+    height: 250px;
+    width: 250px;
+}
+.flex_c{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.description{
+    font-size: var(--label-2);
+}
+.title img{
+    height: 50px;
+    width: auto;
+    margin-left: 30px;
+}
+.title{
+    display: flex;
+    justify-content: space-around;
+}
