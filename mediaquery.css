@@ -26,4 +26,12 @@
         gap:30px;
         align-items: center;
     }
+        .inputBox input {
+        width: 200px;
+      }
+
+       
+button {
+    width: 5em;
+  }
 }
